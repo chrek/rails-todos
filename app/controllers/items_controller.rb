@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_todo
+  before_action :set_item, except: [:create]
   
   def create
     @item = @todo.items.create(item_params)
@@ -15,10 +16,19 @@ class ItemsController < ApplicationController
     end
     redirect_to @todo 
   end
+
+  def complete
+    @item.update_attribute(:completed_at, Time.now)
+    redirect_to @todo, notice: "Item completed"
+  end
   
   private
     def set_todo
       @todo = Todo.find(params[:todo_id])
+    end
+
+    def set_item
+      @item = @todo.items.find(params[:id])
     end
     
     def item_params
