@@ -21,6 +21,9 @@ gem 'jbuilder', '~> 2.7'
 # Uglifier minifies JavaScript files by wrapping UglifyJS to be accessible in Ruby
 gem 'uglifier', '~> 4.2'
 
+# Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem 'figaro', '~> 1.1', '>= 1.1.1' 
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
