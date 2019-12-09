@@ -1,6 +1,9 @@
 {
   "name": "rails_todos",
   "private": true,
+  "resolutions": {
+    "serialize-javascript": "^2.1.1"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
